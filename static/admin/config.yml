@@ -1,16 +1,21 @@
 backend:
-name: gatsbyblogstart
-  repo:Hykids/gatsby-blog
-  auth_type: implicit
+  name: gatsbyblogstart
   branch: master
-  app_id:AAAAB3NzaC1yc2EAAAADAQABAAACAQDEPrjb5QwNZLilAZlnQoRqsc0X41h6dSH8Ubzfw8rEMJhBMUDCHJ4lWZfpQSzdcsoY0rngOxn51SY8191rzVJ82tHnclj0SFWqrdaLkTf9KVr3E/qPGhBv4n7JkeDuIijJHZXo3pTe2V/XZssxVA6F5ezLG4cjDucvoLI1yGI8+lELHjFOkZyuyYZoCNqLaFepfPkTxiwbVTZF/ma+2CW+sjqHl0wA5sxP1UYkUogjrjbIthjhzEI7EUvmGqx3+2rKbjWOrTyruv/jHDkK2vejeN2Pl2TRRd9s0yK683DL0YJTDYKJunOVB7YF6PaRTw5Dv3k724Sy4TgSsMEkq89EjFHWza/nlV8NP7MK4CcYVJBboEOruELPwWIdfmYwCYXodQSKhCdi18ygm1IX9USjbF7c1SidBuwLJLQtqEOFoote/aBU5UY/5WOi1M1v8YPGWlABQJFskl0o04Vw5hwgaNLWLbkTnZ9eJB+0r1d/uuU8a9ql+cD8Y+fN26g1PJTEex9pbZA5L9mtOR8rJpqOusAt6Raa0Y+XWHgFvjjFyPIXv6aNSKnVR9RNgRfQG8YREgfGfXcMNlQe7WBMUkdxSdmMBA13M0Mkjjkh4i4E0JmyRGFRLtGExzXF5WwX7cLyRXK1mVLQxtO6Np/J0BLQ6CsUkcx6KIOO1/yv1xfl0w==
+
+media_folder: static/img
+public_folder: /img
 
 collections:
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
