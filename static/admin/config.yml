@@ -1,5 +1,5 @@
 backend:
-  name: gatsbyblogstart
+  name: git-gateway
   branch: master
 
 media_folder: static/img
