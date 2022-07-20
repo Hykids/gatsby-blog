@@ -1,0 +1,45 @@
+.post-list-item {
+    padding: 10px;
+    padding-left: 20px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.post-list-item:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.post-list-title {
+    color: rgb(219, 181, 110);
+}
+
+.post-list-title:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 2px solid transparent;
+    box-sizing: border-box;
+    /*
+      鼠标移开目的地，以下面的transition属性为准来过渡，请好好理解下面的属性!一旦弄懂了它，就会做了
+    */
+    transform: translate(-50%);
+    transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.2s;
+}
+
+.post-list-title:hover:after {
+    border-bottom-color: rgb(219, 181, 110);
+    /*
+      鼠标移入目的地，以下面的transition属性为准来过渡，请好好理解下面的属性!一旦弄懂了它，就会做了
+    */
+    left: 50%;
+    width: 100%;
+    transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.4s
+}
+
+.post-list-date {
+    color: #999;
+}
